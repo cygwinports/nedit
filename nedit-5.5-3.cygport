@@ -1,0 +1,24 @@
+DESCRIPTION="X multi-purpose text editor"
+HOMEPAGE="http://www.nedit.org/"
+SRC_URI="ftp://ftp.nedit.org/pub/NEdit/v${PV//./_}/${P}-src.tar.bz2"
+PATCH_URI="
+	mirror://portage/app-editors/${PN}/files/${P}-argbvisuals.patch
+	5.5-modular-x11.patch
+"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake cygwin
+}
+
+src_install() {
+	cd ${B}
+	dobin source/nedit.exe
+	newbin source/nc.exe neditc.exe
+
+	newman doc/nedit.man nedit.1
+	newman doc/nc.man neditc.1
+}
+DOCS="ReleaseNotes doc/*.txt doc/nedit.doc"
+HTMLDOCS="doc/html/*"

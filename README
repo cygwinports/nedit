@@ -1,0 +1,109 @@
+nedit
+------------------------------------------
+NEdit is a multi-purpose text editor for the X Window System, which
+combines a standard, easy to use, graphical user interface with the
+thorough functionality and stability required by users who edit text
+eight hours a day. It provides intensive support for development in a
+wide variety of languages, text processors, and other tools, but at the
+same time can be used productively by just about anyone who needs to
+edit text.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libX11_6-1.1.5-1
+  libXm2-0.95.0-2
+  libXt6-1.0.5-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20080624-2
+  cygport-0.4.2-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http:/www.nedit.org/
+
+Canonical download:
+  http:/www.nedit.org/ftp/  
+
+-------------------------------------------
+
+Build instructions:
+  unpack nedit-5.5-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./nedit-5.5-X.cygport all
+
+This will create:
+  /usr/src/nedit-5.5-X-src.tar.bz2
+  /usr/src/nedit-5.5-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/nedit.exe
+  /usr/bin/neditc.exe
+  /usr/share/doc/nedit-5.5/COPYRIGHT
+  /usr/share/doc/nedit-5.5/ChangeLog
+  /usr/share/doc/nedit-5.5/README
+  /usr/share/doc/nedit-5.5/ReleaseNotes
+  /usr/share/doc/nedit-5.5/faq.txt
+  /usr/share/doc/nedit-5.5/html/actions.html
+  /usr/share/doc/nedit-5.5/html/advancedTopics.html
+  /usr/share/doc/nedit-5.5/html/basicSyntax.html
+  /usr/share/doc/nedit-5.5/html/binding.html
+  /usr/share/doc/nedit-5.5/html/calltips.html
+  /usr/share/doc/nedit-5.5/html/clipboard.html
+  /usr/share/doc/nedit-5.5/html/command_line.html
+  /usr/share/doc/nedit-5.5/html/customize.html
+  /usr/share/doc/nedit-5.5/html/defects.html
+  /usr/share/doc/nedit-5.5/html/distribution.html
+  /usr/share/doc/nedit-5.5/html/escapeSequences.html
+  /usr/share/doc/nedit-5.5/html/examples.html
+  /usr/share/doc/nedit-5.5/html/fill.html
+  /usr/share/doc/nedit-5.5/html/format.html
+  /usr/share/doc/nedit-5.5/html/hiliteInfo.html
+  /usr/share/doc/nedit-5.5/html/indent.html
+  /usr/share/doc/nedit-5.5/html/interface.html
+  /usr/share/doc/nedit-5.5/html/keyboard.html
+  /usr/share/doc/nedit-5.5/html/learn.html
+  /usr/share/doc/nedit-5.5/html/macro_lang.html
+  /usr/share/doc/nedit-5.5/html/macro_subrs.html
+  /usr/share/doc/nedit-5.5/html/mailing_list.html
+  /usr/share/doc/nedit-5.5/html/mouse.html
+  /usr/share/doc/nedit-5.5/html/nedit.html
+  /usr/share/doc/nedit-5.5/html/parenConstructs.html
+  /usr/share/doc/nedit-5.5/html/patterns.html
+  /usr/share/doc/nedit-5.5/html/preferences.html
+  /usr/share/doc/nedit-5.5/html/programmer.html
+  /usr/share/doc/nedit-5.5/html/rangeset.html
+  /usr/share/doc/nedit-5.5/html/recovery.html
+  /usr/share/doc/nedit-5.5/html/resources.html
+  /usr/share/doc/nedit-5.5/html/search.html
+  /usr/share/doc/nedit-5.5/html/select.html
+  /usr/share/doc/nedit-5.5/html/server.html
+  /usr/share/doc/nedit-5.5/html/shell.html
+  /usr/share/doc/nedit-5.5/html/smart_indent.html
+  /usr/share/doc/nedit-5.5/html/start.html
+  /usr/share/doc/nedit-5.5/html/syntax.html
+  /usr/share/doc/nedit-5.5/html/tabs.html
+  /usr/share/doc/nedit-5.5/html/tags.html
+  /usr/share/doc/nedit-5.5/html/version.html
+  /usr/share/doc/nedit-5.5/nedit.doc
+  /usr/share/doc/nedit-5.5/setext-info.txt
+  /usr/share/man/man1/nedit.1.gz
+  /usr/share/man/man1/neditc.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 5.5-3 -----
+Rebuilt with patch from Gentoo for recent X.Org changes.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
