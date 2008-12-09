@@ -1,0 +1,11 @@
+--- origsrc/nedit-5.5/util/check_lin_tif.c	2004-07-21 06:32:07.000000000 -0500
++++ src/nedit-5.5/util/check_lin_tif.c	2008-12-09 00:18:04.409250000 -0600
+@@ -186,7 +186,7 @@
+             "Please report your success or failure with this version to:\n"
+             "\tdevelop@nedit.org\n"
+             "\nHIT ENTER TO CONTINUE\n", tif);
+-        fgets(buf, 2, stdin);
++        /* fgets(buf, 2, stdin); */
+         exit(0);
+ #else
+         fprintf(stderr,

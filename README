@@ -45,7 +45,7 @@ This will create:
 Files included in the binary package:
 
   /usr/bin/nedit.exe
-  /usr/bin/neditc.exe
+  /usr/bin/nedit-nc.exe
   /usr/share/doc/nedit-5.5/COPYRIGHT
   /usr/share/doc/nedit-5.5/ChangeLog
   /usr/share/doc/nedit-5.5/README
@@ -95,11 +95,14 @@ Files included in the binary package:
   /usr/share/doc/nedit-5.5/nedit.doc
   /usr/share/doc/nedit-5.5/setext-info.txt
   /usr/share/man/man1/nedit.1.gz
-  /usr/share/man/man1/neditc.1.gz
+  /usr/share/man/man1/nedit-nc.1.gz
 
 ------------------
 
 Port Notes:
+
+----- version 5.5-4 -----
+Enabled a few more features.
 
 ----- version 5.5-3 -----
 Rebuilt with patch from Gentoo for recent X.Org changes.
