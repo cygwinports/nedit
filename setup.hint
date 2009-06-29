@@ -1,5 +1,5 @@
 category: Editors X11
-requires: cygwin libX11_6 libXm2 libXt6
+requires: libX11_6 libXm2 libXt6
 sdesc: "X multi-purpose text editor"
 ldesc: "NEdit is a multi-purpose text editor for the X Window System, 
 which combines a standard, easy to use, graphical user interface with 
