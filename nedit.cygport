@@ -1,6 +1,6 @@
 NAME="nedit"
 VERSION=5.5
-RELEASE=4
+RELEASE=5
 CATEGORY="Editors"
 SUMMARY="Motif multi-purpose text editor"
 DESCRIPTION="NEdit is a multi-purpose text editor for the X Window System,
@@ -13,8 +13,8 @@ HOMEPAGE="http://www.nedit.org/"
 SRC_URI="mirror://sourceforge/nedit/${P}-src.tar.bz2"
 PATCH_URI="
 	mirror://portage/app-editors/${PN}/files/${P}-argbvisuals.patch
+	mirror://portage/app-editors/${PN}/files/${P}-motif23.patch
 	5.5-modular-x11.patch
-	5.5-lesstif-version-warning.patch
 "
 
 src_compile() {
