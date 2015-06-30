@@ -1,6 +1,6 @@
 NAME="nedit"
-VERSION=5.5
-RELEASE=6
+VERSION=5.6
+RELEASE=1
 CATEGORY="Editors"
 SUMMARY="Motif multi-purpose text editor"
 DESCRIPTION="NEdit is a multi-purpose text editor for the X Window System,
@@ -10,30 +10,40 @@ hours a day. It provides intensive support for development in a wide variety
 of languages, text processors, and other tools, but at the same time can be
 used productively by just about anyone who needs to edit text."
 HOMEPAGE="http://www.nedit.org/"
-SRC_URI="mirror://sourceforge/nedit/${P}-src.tar.bz2
-         nedit.xpm"
+SRC_URI="
+	mirror://sourceforge/nedit/nedit-${VERSION}a-src.tar.gz
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-icon.png
+"
 PATCH_URI="
-	mirror://portage/app-editors/${PN}/files/${P}-argbvisuals.patch
-	mirror://portage/app-editors/${PN}/files/${P}-motif23.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.5-security.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.6-makefiles.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.6-utf8.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.6-nc-manfix.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.5-visfix.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.5-scroll.patch
+	http://pkgs.fedoraproject.org/cgit/nedit.git/plain/nedit-5.6-format.patch
 	5.5-modular-x11.patch
 "
+
+REQUIRES="font-adobe-dpi100 font-adobe-dpi75"
 
 src_compile() {
 	lndirs
 	cd ${B}
-	cygmake cygwin
+	cygmake cygwin C_OPT_FLAGS="${CFLAGS}"
 }
 
 src_install() {
 	cd ${B}
 	dobin source/nedit.exe
-	newbin source/nc.exe nedit-nc.exe
+	newbin source/nc.exe nedit-client.exe
+	dosym nedit-client.exe /usr/bin/nedit-nc
 
 	newman doc/nedit.man nedit.1
-	newman doc/nc.man nedit-nc.1
+	newman doc/nc.man nedit-client.1
 
 	make_desktop_entry nedit NEdit nedit "Utility;TextEditor;Motif"
-	doicon nedit.xpm
+	newicon nedit-icon.png nedit.png
 }
 DOCS="ReleaseNotes doc/*.txt doc/nedit.doc"
 HTMLDOCS="doc/html/*"
